@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+
+<head>
+  <title>Angular Statistics</title>
+  <meta charset="UTF-8">
+
+  {% seo %}
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+  <meta name="theme-color"
+        content="#157878">
+  <meta name="apple-mobile-web-app-status-bar-style"
+        content="black-translucent">
+  <link rel="stylesheet"
+        href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet"
+        href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="/assets/sigma.js"></script>
+  <script src="/assets/sigma.parsers.json.js"></script>
+  <script src="/assets/d3.min.js"></script>
+  <script src="/assets/Chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/emn178/chartjs-plugin-labels/src/chartjs-plugin-labels.js"></script>
+  <link rel="stylesheet" href="/assets/Chart.css"></link>
+
+</head>
+
+<body>
+  <header class="page-header"
+          role="banner">
+    <h1 class="project-name raleway">{{ site.title }}</h1>
+    <h2 class="project-tagline raleway"
+        style="opacity: 1 !important;">
+      {{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
+  </header>
+
+  <main id="content"
+        class="main-content"
+        role="main">
+    {{ content }}
+  </main>
+</body>
+
+</html>
