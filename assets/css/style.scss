@@ -12,12 +12,10 @@
   background-attachment: fixed;
 }
 
-
-
-.image-row:after {
-  content: "";
-  display: table;
-  clear: both;
+@media screen and (min-width: 64em) {
+  .page-header {
+      padding: 2rem 6rem;
+  }
 }
 
 #profil {
