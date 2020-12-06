@@ -55,7 +55,7 @@ function makeChart(data) {
             },
             {
             render: 'percentage',
-            fontColor: ['white', 'white', 'white']
+            fontColor: ['white', 'white', 'white', 'white']
             }
       ]              
     }
