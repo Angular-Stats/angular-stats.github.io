@@ -1,6 +1,6 @@
 theme: jekyll-theme-cayman
 title: GitHub Angular Statistics
 logo: images/me.jpg
-description: Statistics of the 100 Angular projects with the most stars 
+description: Statistics of 100 Angular projects on GitHub with the most stars
 plugins:
   - jekyll-sitemap

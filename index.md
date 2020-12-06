@@ -1,6 +1,8 @@
 ---
 layout: default
 ---
+While Angular is one of the most famous frontend framework there are very few informations about its usage. This page tries to overcome this void and deliver reliable informations about hundred Angular projects hosted on GitHub and awarded with the most stars. There are only projects included which use angular-core as its dependency.
+
 Last update: 05.12.2020
 
 ## Angular Core Version
