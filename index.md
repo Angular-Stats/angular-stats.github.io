@@ -3,7 +3,7 @@ layout: default
 ---
 While Angular is one of the most famous frontend framework there are very few informations about its usage. This page tries to overcome this void and deliver reliable informations about hundred Angular 2+ projects hosted on GitHub and awarded with the most stars. There are only projects included which use angular-core as its dependency. This statistics was created in December 2020. At the end you find a [list of all projects](#list-of-all-projects) which were evaluated in this study. 
 
-This is a part time project of mine. As I'm working as a Frontend Freelancer I often get questions about various usage of Angular so I started this research. If you want to get in touch with me, feel free to visit my [main page](https://patalas.github.io).
+This is a part time project of mine. Since I work as a front-end freelancer, I often get questions about the various uses of Angular, so I started this research. If you want to get in touch with me, feel free to visit my [main page](https://patalas.github.io).
 
 ### Angular Core Version
 Only half of the projects are on major version 11 or 10. Suprisingly over 10% of the projects are on Version 6 or older.
