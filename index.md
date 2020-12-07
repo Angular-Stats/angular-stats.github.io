@@ -1,11 +1,9 @@
 ---
 layout: default
 ---
-While Angular is one of the most famous frontend framework there are very few informations about its usage. This page tries to overcome this void and deliver reliable informations about hundred Angular 2+ projects hosted on GitHub and awarded with the most stars. There are only projects included which use angular-core as its dependency.
+While Angular is one of the most famous frontend framework there are very few informations about its usage. This page tries to overcome this void and deliver reliable informations about hundred Angular 2+ projects hosted on GitHub and awarded with the most stars. There are only projects included which use angular-core as its dependency. This statistics was created on December 2020. At the end you find a [list of all projects](#list-of-all-projects) which were evaluated in this study. 
 
 This is a part time project of mine. As I'm working as a Frontend Freelancer I often get questions about various usage of Angular so I started this research. If you want to get in touch with me, feel free to visit my [main page](https://patalas.github.io).
-
-This statistics was created on December 2020. At the end you find a [list of all projects](#list-of-all-projects-evaluated-for-this-study) which were evaluated in this study. 
 
 ### Angular Core Version
 Only half of the projects are on major version 11 or 10. Suprisingly over 10% of the projects are on Version 6 or older.
@@ -64,8 +62,8 @@ function makeChart(data) {
 </script>
 
 ### GitHub Commits per Year
+The number of the commits per year shows a good picture of the activity regarding the projects. Most commits are in 2018 with a big fall in 2019. 
 <canvas id="log-years"></canvas>
-
 <script>
 d3.csv('/assets/stats/log-years.csv')
   .then(makeChartLogYears);
@@ -96,7 +94,7 @@ function makeChartLogYears(data) {
 </script>
 
 ### File types
-It's not a big suprise that half of the files are typescript files. 
+It's not a big suprise that half of the files are typescript files. What is interesting, that with scss on the third place, most projects seems to favour Scss over the other options.
 <canvas id="filetypes"></canvas>
 <script>
 d3.csv('/assets/stats/filetypes.csv')
@@ -177,7 +175,8 @@ function makeChart(data) {
 
 <div style="margin-top: 20rem"></div>
 
-### List of all projects evaluated for this study
+### List of all projects
+This is the list of all one hundred evaluated projects for this study. To get this list, we get a list of over 200 Angular tagged projects with the most stars given in GitHub. After that we removed all projects, which do not use the @angular-core dependency. This are most likely projects, which are related to Angular, like for example the Angular project itself, but they do not use Angular. For the remaining we took the first one hundred with the most stars, which are listed below. 
 - SortableJS/ngx-sortablejs <https://github.com/SortableJS/ngx-sortablejs>
 - ngrx/example-app <https://github.com/ngrx/example-app>
 - sweetalert2/ngx-sweetalert2 <https://github.com/sweetalert2/ngx-sweetalert2>
