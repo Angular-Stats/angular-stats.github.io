@@ -6,7 +6,7 @@ While Angular is one of the most famous frontend framework there are very few in
 This is a part time project of mine. Since I work as a front-end freelancer, I often get questions about the various uses of Angular, so I started this research. If you want to get in touch with me, feel free to visit my [main page](https://patalas.github.io).
 
 ### Angular Core Version
-Only half of the projects are on major version 11 or 10. Suprisingly over 10% of the projects are on Version 6 or older.
+On of the most interesting question was on which major version most of the projects are. Even though it breaks our story telling, we would like to start with it. Suprisingly only half of the projects are on major version 11 or 10. We had suspect a much higher percentage. What was shocking to us was the 11% with Version 6 or lower.  Version 6 was realeased in May 2018, Version 5 and 4 November respectively March 2017.
 <canvas id="core"></canvas>
 <script>
 d3.csv('/assets/stats/versions.csv')
@@ -62,8 +62,8 @@ function makeChart(data) {
 </script>
 
 ### GitHub Commits per Year
-The number of the commits per year shows a good picture of the activity regarding the projects. Most commits are in 2018 with a big fall in 2019. 
-<canvas id="log-years"></canvas>
+The number of the commits per year shows us a good picture of the activity inside the projects. We see a steady grow up to 2017 with a big jump 2018, following by a weak 2019 and 2020. We don't have enough inside data to give a reason for the fall.  
+<canvas id="log-years"  style="margin-bottom: 5rem"></canvas>
 <script>
 d3.csv('/assets/stats/log-years.csv')
   .then(makeChartLogYears);
@@ -89,6 +89,38 @@ function makeChartLogYears(data) {
        title: {
         display: true,
         text: "Number of commits per year"
+      }}});
+};
+</script>
+
+
+### Size of the Projects
+<canvas id="files"></canvas>
+<script>
+d3.csv('/assets/stats/files.csv')
+  .then(makeChart);
+
+function makeChart(data) {
+    var dataLabels = data.map(function(d) {return d.Size});
+    var dataValues = data.map(function(d) {return d.Number});
+    var chart = new Chart('files', {
+        type: 'bar',
+        data: {
+            labels: dataLabels,
+            datasets: [
+            {
+                data: dataValues,
+                backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#c45850", "#e8c3b9","#f38b4a"]
+            }
+            ]
+        },
+         options: {
+           plugins: { labels: { render: function (args) { return args.value + "%" } } },
+          
+      legend: { display: false },
+       title: {
+        display: true,
+        text: "Number of files except files and folders starting with a dot"
       }}});
 };
 </script>
@@ -139,41 +171,12 @@ function makeFileTypesChart(data) {
 };
 </script>
 
-### Size of the Projects
-<canvas id="files"></canvas>
-<script>
-d3.csv('/assets/stats/files.csv')
-  .then(makeChart);
-
-function makeChart(data) {
-    var dataLabels = data.map(function(d) {return d.Size});
-    var dataValues = data.map(function(d) {return d.Number});
-    var chart = new Chart('files', {
-        type: 'bar',
-        data: {
-            labels: dataLabels,
-            datasets: [
-            {
-                data: dataValues,
-                backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#c45850", "#e8c3b9","#f38b4a"]
-            }
-            ]
-        },
-         options: {
-           plugins: { labels: { render: function (args) { return args.value + "%" } } },
-          
-      legend: { display: false },
-       title: {
-        display: true,
-        text: "Number of files except files and folders starting with a dot"
-      }}});
-};
-</script>
 
 
 
 
-<div style="margin-top: 20rem"></div>
+
+<div style="margin-top: 10rem"></div>
 
 ### List of all projects
 This is the list of all one hundred evaluated projects for this study. To get this list, we get a list of over 200 Angular tagged projects with the most stars given in GitHub. After that we removed all projects, which do not use the @angular-core dependency. This are most likely projects, which are related to Angular, like for example the Angular project itself, but they do not use Angular. For the remaining we took the first one hundred with the most stars, which are listed below. 
