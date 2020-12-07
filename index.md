@@ -95,6 +95,7 @@ function makeChartLogYears(data) {
 
 
 ### Size of the Projects
+After getting a first inside about the projects we are facing, we wanted to know more about their structure. We started to get a look on the size of the projects. We thought about to count all files, but that is very misleading. A small project with few functionality but a lot of pictures would look enormous. We decided to count only this filetypes: ts, js, json, scss, css, sass, less and htm/html. Additionally we excluded all folder and files starting with a dot.
 <canvas id="files"></canvas>
 <script>
 d3.csv('/assets/stats/files.csv')
@@ -120,11 +121,11 @@ function makeChart(data) {
       legend: { display: false },
        title: {
         display: true,
-        text: "Number of files except files and folders starting with a dot"
+        text: "Number of files (ts, js, json, scss, css, sass, less and htm/html)"
       }}});
 };
 </script>
-
+One third of the projects are in the category 20-50, something we expected. Whats rather interesting is that over 20% of the projects are rather big.
 ### File types
 It's not a big suprise that half of the files are typescript files. What is interesting, that with scss on the third place, most projects seems to favour Scss over the other options.
 <canvas id="filetypes"></canvas>
