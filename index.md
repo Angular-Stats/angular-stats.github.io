@@ -1,9 +1,11 @@
 ---
 layout: default
 ---
-While Angular is one of the most famous frontend framework there are very few informations about its usage. This page tries to overcome this void and deliver reliable informations about hundred Angular 2+ projects hosted on GitHub and awarded with the most stars. There are only projects included which use angular-core as its dependency. This statistics was created in December 2020. At the end you find a [list of all projects](#list-of-all-projects) which were evaluated in this study. 
+While Angular is one of the most well-known frontend frameworks, there is very little information available about its use. This page seeks to fill this void and provide reliable statistics based on the 100 Angular 2+ projects that have been awarded the most stars and are hosted on GitHub.
 
-This is a part time project of mine. Since I work as a front-end freelancer, I often get questions about the various uses of Angular, so I started this research. If you want to get in touch with me, feel free to visit my [main page](https://patalas.github.io).
+There are only projects included which use angular-core as its dependency. This statistics was created in December 2020. We used the master branch of each project for this analysis. At the end you find a [list of all projects](#list-of-all-projects) which were evaluated in this study. 
+
+This is a part time project of mine. Since I work as a front-end freelancer, I often get questions about the various uses of Angular, so I started this research. If you want to get in touch with me, please visit my [main page](https://patalas.github.io).
 
 ### Angular Core Version
 On of the most interesting question was on which major version most of the projects are. Even though it breaks our story telling, we would like to start with it. Suprisingly only half of the projects are on major version 11 or 10. We had suspect a much higher percentage. What was shocking to us was the 11% with Version 6 or lower.  Version 6 was realeased in May 2018, Version 5 and 4 November respectively March 2017.
