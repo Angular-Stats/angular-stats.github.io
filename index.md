@@ -63,6 +63,47 @@ function makeChart(data) {
 };
 </script>
 
+### Abandoned projects
+After seeing so many projects still on core versions older than two or more years, we asked ourselves, if there are abandoned project. For each projects we determine the last commit date, which should be a good indication, if this project is still in development. We checked if the last commit date is fresh (younger than a month), half fresh (between one and three months), oldie (three to six months) or rotten (older than six months). To get a better feeling with our predictions related to the used core version, we split the projects in these using Angular 11/10 and all others with Angular 9 or older.
+
+<canvas id="abandoned"></canvas>
+<script>
+d3.csv('/assets/stats/active.csv')
+  .then(makeChart);
+
+function makeChart(data) {
+    var dataLabels = data.map(function(d) {return d.Range});
+    var dataValues1 = data.map(function(d) {return d.Number1});
+    var dataValues2 = data.map(function(d) {return d.Number2});
+    var colors = data.map(function(d) { return greenToRedColors[d.Version - 3]});
+    var chart = new Chart('abandoned', {
+        type: 'bar',
+        data: {
+            labels: dataLabels,
+            datasets: [
+            {
+                label: 'With Angular 9 or older',
+                data: dataValues1,
+                backgroundColor: "#c45850"
+            }, {
+                label: 'With Angular 11/10',
+                data: dataValues2,
+                backgroundColor: "#3cba9f"
+            }
+            ]
+        },
+         options: {
+           plugins: { labels: { render: function (args) { return args.value } } },
+          
+      legend: { display: true },
+        title: {
+        display: true,
+        text: "Last commit older than x months"
+      }
+      }});
+};
+</script>
+Our presumption seems to be right. Nearly half of the projects with Angular 9 or older seems to be abandoned (last commit older than half a year). But there are still fresh projects, who doesn't jump to the latest Angular version. There is still more research to do. We don't want to go any further and take a look at other aspects.
 ### GitHub Commits per Year
 The number of the commits per year shows us a good picture of the activity inside the projects. We see a steady grow up to 2017 with a big jump 2018, following by a weak 2019 and 2020. We don't have enough inside data to give a reason for the fall.  
 <canvas id="log-years"  style="margin-bottom: 5rem"></canvas>
