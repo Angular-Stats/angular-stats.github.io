@@ -1,14 +1,14 @@
 ---
 layout: default
 ---
-While Angular is one of the most well-known frontend frameworks, there is very little information available about its use. This page seeks to fill this void and provide reliable statistics based on the 100 Angular 2+ projects that have been awarded the most stars and are hosted on GitHub.
+While Angular is one of the most well-known frontend frameworks, there is very little information available about its use. This page seeks to fill this void and provide reliable statistics based on the 100 Angular 2+ repositories that have been awarded the most stars and are hosted on GitHub.
 
-There are only projects included which use angular-core as its dependency. This statistics was created in December 2020. We used the master branch of each project for this analysis. At the end you find a [list of all projects](#list-of-all-projects) which were evaluated in this study. 
+We only included repositories which use angular-core as its dependency. This statistics was created in December 2020. We used the master branch of each repository for this analysis. At the end you find a [list of all repositories](#list-of-all-repositories) which were evaluated in this study. 
 
 This is a part time project of mine. Since I work as a front-end freelancer, I often get questions about the various uses of Angular, so I started this research. If you want to get in touch with me, please visit my [main page](https://patalas.github.io).
 
 ### Angular Core Version
-On of the most interesting question was on which major version most of the projects are. Even though it breaks our story telling, we would like to start with it. Suprisingly only half of the projects are on major version 11 or 10. We had suspect a much higher percentage. What was shocking to us was the 11% with Version 6 or lower.  Version 6 was realeased in May 2018, Version 5 and 4 November respectively March 2017.
+On of the most interesting question was on which major version most of the repositories are. Even though it breaks our story telling, we would like to start with it. Suprisingly only half of the repositories are on major version 11 or 10. We had suspect a much higher percentage. What was shocking to us was the 11% with Version 6 or lower.  Version 6 was realeased in May 2018, Version 5 and 4 November respectively March 2017.
 <canvas id="core"></canvas>
 <script>
 d3.csv('/assets/stats/versions.csv')
@@ -63,8 +63,8 @@ function makeChart(data) {
 };
 </script>
 
-### Abandoned projects
-After seeing so many projects still on core versions older than two or more years, we asked ourselves, if there are abandoned project. For each projects we determine the last commit date, which should be a good indication, if this project is still in development. We checked if the last commit date is fresh (younger than a month), half fresh (between one and three months), oldie (three to six months) or rotten (older than six months). To get a better feeling with our predictions related to the used core version, we split the projects in these using Angular 11/10 and all others with Angular 9 or older.
+### Abandoned repositories
+After seeing so many repositories still on core versions older than two or more years, we asked ourselves, if there are abandoned repositories. For each repository we determine the last commit date, which should be a good indication, if this repository is still in development. We checked if the last commit date is fresh (younger than a month), half fresh (between one and three months), oldie (three to six months) or rotten (older than six months). To get a better feeling with our predictions related to the used core version, we split the repositories in these using Angular 11/10 and all others with Angular 9 or older.
 
 <canvas id="abandoned"></canvas>
 <script>
@@ -103,9 +103,9 @@ function makeChart(data) {
       }});
 };
 </script>
-Our presumption seems to be right. Nearly half of the projects with Angular 9 or older seems to be abandoned (last commit older than half a year). But there are still fresh projects, who doesn't jump to the latest Angular version. There is still more research to do. We don't want to go any further and take a look at other aspects.
+Our presumption seems to be right. Nearly half of the repositories with Angular 9 or older seems to be abandoned (last commit older than half a year). But there are still fresh repositories, who doesn't jump to the latest Angular version. There is still more research to do. We don't want to go any further and take a look at other aspects.
 ### GitHub Commits per Year
-The number of the commits per year shows us a good picture of the activity inside the projects. We see a steady grow up to 2017 with a big jump 2018, following by a weak 2019 and 2020. We don't have enough inside data to give a reason for the fall.  
+The number of the commits per year shows us a good picture of the activity inside the repositories. We see a steady grow up to 2017 with a big jump 2018, following by a weak 2019 and 2020. We don't have enough inside data to give a reason for the fall.  
 <canvas id="log-years"  style="margin-bottom: 5rem"></canvas>
 <script>
 d3.csv('/assets/stats/log-years.csv')
@@ -138,7 +138,7 @@ function makeChartLogYears(data) {
 
 
 ### Size of the Projects
-After getting a first inside about the projects we are facing, we wanted to know more about their structure. We started to get a look on the size of the projects. We thought about to count all files, but that is very misleading. A small project with few functionality but a lot of pictures would look enormous. We decided to count only this filetypes: ts, js, json, scss, css, sass, less and htm/html. Additionally we excluded all folder and files starting with a dot.
+After getting a first inside about the repositories we are facing, we wanted to know more about their structure. We started to get a look on the size of the repositories. We thought about to count all files, but that is very misleading. A small repositories with few functionality but a lot of pictures would look enormous. We decided to count only this filetypes: ts, js, json, scss, css, sass, less and htm/html. Additionally we excluded all folder and files starting with a dot.
 <canvas id="files"></canvas>
 <script>
 d3.csv('/assets/stats/files.csv')
@@ -168,7 +168,7 @@ function makeChart(data) {
       }}});
 };
 </script>
-One third of the projects are in the category 20-50, something we expected. Whats rather interesting is that over 20% of the projects are rather big.
+One third of the repositories are in the category 20-50, something we expected. Whats rather interesting is that over 20% of the repositories are rather big with over 200 files.
 ### File types
 It's not a big suprise that half of the files are typescript files. What is interesting, that with scss on the third place, most projects seems to favour Scss over the other options.
 <canvas id="filetypes"></canvas>
@@ -222,8 +222,8 @@ function makeFileTypesChart(data) {
 
 <div style="margin-top: 10rem"></div>
 
-### List of all projects
-This is the list of all one hundred evaluated projects for this study. To get this list, we get a list of over 200 Angular tagged projects with the most stars given in GitHub. After that we removed all projects, which do not use the @angular-core dependency. This are most likely projects, which are related to Angular, like for example the Angular project itself, but they do not use Angular. For the remaining we took the first one hundred with the most stars, which are listed below. 
+### List of all repositories
+This is the list of all one hundred evaluated repositories for this study. To get this list, we get a list of over 200 Angular tagged repositories with the most stars given in GitHub. After that we removed all repositories, which do not use the @angular-core dependency. This are most likely repositories, which are related to Angular, like for example the Angular project itself, but they do not use Angular. For the remaining we took the first one hundred with the most stars, which are listed below. 
 - SortableJS/ngx-sortablejs <https://github.com/SortableJS/ngx-sortablejs>
 - ngrx/example-app <https://github.com/ngrx/example-app>
 - sweetalert2/ngx-sweetalert2 <https://github.com/sweetalert2/ngx-sweetalert2>
